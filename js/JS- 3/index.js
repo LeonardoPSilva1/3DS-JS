@@ -8,3 +8,4 @@ rodarIMC(pessoas);
 mostrarIMC();
 categoria();
 console.log(pessoas)
+console.log(pessoa)

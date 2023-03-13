@@ -8,7 +8,7 @@ export default class pessoa {
     this.CategoriaIMC =  "n/a";
     }
     calcularIMC(){
-            this.imc = this.peso / (this.altura * this.altura);
+        this.imc = this.peso / (this.altura * this.altura);
      
             if(this.imc <= 18.5){
              this.CategoriaIMC = "Abaixo do peso!"
