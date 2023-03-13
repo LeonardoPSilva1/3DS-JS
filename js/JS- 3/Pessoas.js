@@ -52,6 +52,13 @@ pessoa2.altura = 1.79
 pessoa2.imc = 0,
 pessoa2.categoriaIMC = 'n/a'
 
+pessoa3.nome = 'Leonardo'
+pessoa3.idade = 17
+pessoa3.peso = 76.5
+pessoa3.altura = 1.83
+pessoa3.imc = 0,
+pessoa3.categoriaIMC = 'n/a'
 
 console.log(pessoa1)
 console.log(pessoa2)
+console.log(pessoas3) 

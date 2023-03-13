@@ -45,4 +45,4 @@ export function categoria(){
 };
 mostrarIMC(Pessoas[3]);
 categoria();
-console.log(Pessoas);
+console.log(Pessoas)
