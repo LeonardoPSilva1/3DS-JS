@@ -1,69 +1,38 @@
-class Pessoas
-{
-// atribuitos = variaveis ou caracteristicas
-nome 
-idade
-peso
-altura
-imc
-categoriaIMC
-//comportamento = metodos
+export default class pessoa {
+    constructor(nome, idade, altura, peso){
+    this.nome = nome;
+    this.idade = idade;
+    this.altura = altura;
+    this.peso = peso;
+    this.imc = 0;
+    this.CategoriaIMC =  "n/a";
+    }
+    calcularIMC(){
+            this.imc = this.peso / (this.altura * this.altura);
+     
+            if(this.imc <= 18.5){
+             this.CategoriaIMC = "Abaixo do peso!"
+            }else if(this.imc <= 24.9) {
+             this.CategoriaIMC = "Peso Normal"
+            }else if(this.imc <= 29.9){
+             this.CategoriaIMC = "Sobrepeso!"
+            }else if(this.imc <= 34.9){
+             this.CategoriaIMC = "Obesidade Grau 1"
+            }else if(this.imc <= 39.9){
+             this.CategoriaIMC = "Obesidade Grau 2"
+            }else if(this.imc <= 40){
+             this.CategoriaIMC = "Obesidade Grau 3"
+            }
+         }
 
-}
-//objeto 
+    }
+export let pessoas = [
+    {
+    Humano: new pessoa('Leonardo', 17, 1.83, 78.5)
+    },
+    {
+    Humano: new pessoa('Magno', 18, 1.83, 70.5)
+    }
+    ]
 
-let pessoa1 = new Pessoas()
-let pessoa2 = new Pessoas()
-let pessoa3= new Pessoas()
-let pessoa4 = new Pessoas()
-let pessoa5 = new Pessoas()
-
-let pessoa6 = new Pessoas()
-let pessoa7 = new Pessoas()
-let pessoa8 = new Pessoas()
-let pessoa9 = new Pessoas()
-let pessoa10 = new Pessoas()
-
-let pessoa11 = new Pessoas()
-let pessoa12 = new Pessoas()
-let pessoa13 = new Pessoas()
-let pessoa14 = new Pessoas()
-let pessoa15 = new Pessoas()
-
-let pessoa16 = new Pessoas()
-let pessoa17 = new Pessoas()
-let pessoa18 = new Pessoas()
-let pessoa19 = new Pessoas()
-let pessoa20 = new Pessoas()
-
-
-//atribuir 
-pessoa1.nome = 'Leandro'
-pessoa1.idade = 42
-pessoa1.peso = 80
-pessoa1.altura = 1.80
-pessoa1.imc = 0,
-pessoa1.categoriaIMC = 'n/a'
-
-pessoa2.nome = 'Fernando'
-pessoa2.idade = 43
-pessoa2.peso = 81.5
-pessoa2.altura = 1.79
-pessoa2.imc = 0,
-pessoa2.categoriaIMC = 'n/a'
-
-pessoa3.nome = 'Leonardo'
-pessoa3.idade = 17
-pessoa3.peso = 76.5
-pessoa3.altura = 1.83
-pessoa3.imc = 0,
-pessoa3.categoriaIMC = 'n/a'
-
-//tabelaPessoas
-var tabelaPessoas{
-    pessoa1,
-}
-
-console.log(pessoa1)
-console.log(pessoa2)
-console.log(pessoas3) 
+  

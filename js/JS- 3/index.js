@@ -1,5 +1,10 @@
-import { calculo } from "./IMC.js";
+import pessoa from "./Pessoas.js";
+import { pessoas } from "./Pessoas.js";
+import mostrarIMC from "./IMC.js";
 import { categoria } from "./IMC.js";
-import { mostrarIMC } from "./IMC.js"
+import { rodarIMC } from "./IMC.js";
 
-console.log();
+rodarIMC(pessoas);
+mostrarIMC();
+categoria();
+console.log(pessoas)

@@ -1,24 +1,3 @@
-export function calculo(){
-    for(var i = 0; i < Pessoas.length; i++){
-       var pessoa = Pessoas[i];
-       pessoa.imc = pessoa.peso / (pessoa.altura * pessoa.altura);
-
-       if(Alunos[i].imc <= 18.5){
-        Alunos[i].CategoriaIMC = "Abaixo do peso!"
-       }else if(Alunos[i].imc <= 24.9) {
-        Alunos[i].CategoriaIMC = "Peso Normal"
-       }else if(Alunos[i].imc <= 29.9){
-        Alunos[i].CategoriaIMC = "Sobrepeso!"
-       }else if(Alunos[i].imc <= 34.9){
-        Alunos[i].CategoriaIMC = "Obesidade Grau 1"
-       }else if(Alunos[i].imc <= 39.9){
-        Alunos[i].CategoriaIMC = "Obesidade Grau 2"
-       }else if(Alunos[i].imc <= 40){
-        Alunos[i].CategoriaIMC = "Obesidade Grau 3"
-       }
-    }
-};
-calculo();
 
 export function categoria(){
     var tabela = {
@@ -31,18 +10,25 @@ export function categoria(){
     };
    
     for(var i = 0; i < Pessoas.length; i++){
-       var pessoa = Pessoas[i];
+       var pessoa = Pessoas[i].Humano;
        tabela[pessoa.CategoriaIMC] += 1;
    };
    console.log(tabela);
    };
 
-export function mostrarIMC(Pessoas){
-
+export default function mostrarIMC(pessoa){
+    
     var texto = "";
-    texto += Pessoas.nome + " - " + Pessoas.imc.toFixed(2) + " Categorizado: "+ Pessoas.CategoriaIMC;
+    texto += pessoa.nome + " - " + pessoa.imc.toFixed(2) + " Categorizado: "+ pessoa.CategoriaIMC;
     console.log(texto);
 };
-mostrarIMC(Pessoas[3]);
-categoria();
-console.log(Pessoas)
+
+export function rodarIMC(pessoas){
+    for(var i = 0; i < pessoas.length; i++){
+        var pessoa = pessoas[i].Humano;
+
+        pessoa.calcularIMC();
+        
+}
+}
+
