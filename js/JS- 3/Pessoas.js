@@ -59,6 +59,11 @@ pessoa3.altura = 1.83
 pessoa3.imc = 0,
 pessoa3.categoriaIMC = 'n/a'
 
+//tabelaPessoas
+var tabelaPessoas{
+    pessoa1,
+}
+
 console.log(pessoa1)
 console.log(pessoa2)
 console.log(pessoas3) 
