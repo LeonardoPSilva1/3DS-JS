@@ -1,11 +1,9 @@
-import pessoa from "./Pessoas.js";
-import { pessoas } from "./Pessoas.js";
-import mostrarIMC from "./IMC.js";
-import { categoria } from "./IMC.js";
-import { rodarIMC } from "./IMC.js";
+import Pessoa from "./pessoas.js";
+import {lista} from "./pessoas.js";
 
-rodarIMC(pessoas);
-mostrarIMC(pessoa);
-categoria();
 
-console.log(pessoa)
+console.log(lista)
+
+lista[0].calculaIMC()
+
+console.log(lista[0])
