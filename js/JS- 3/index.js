@@ -5,7 +5,7 @@ import { categoria } from "./IMC.js";
 import { rodarIMC } from "./IMC.js";
 
 rodarIMC(pessoas);
-mostrarIMC();
+mostrarIMC(pessoa);
 categoria();
-console.log(pessoas)
+
 console.log(pessoa)

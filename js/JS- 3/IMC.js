@@ -16,7 +16,7 @@ export function categoria(){
    console.log(tabela);
    };
 
-export default function mostrarIMC(pessoa){
+   export default function mostrarIMC(pessoa){
     
     var texto = "";
     texto += pessoa.nome + " - " + pessoa.imc.toFixed(2) + " Categorizado: "+ pessoa.CategoriaIMC;
