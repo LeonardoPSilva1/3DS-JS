@@ -10,6 +10,7 @@ export default class Pessoa {
     }
     calculaIMC(){
     this.imc = this.peso / (this.altura * this.altura);
+    
     if(this.imc <= 18.5){
         this.categoriaIMC = "Abaixo do peso!"
        }else if(this.imc <= 24.9) {
@@ -33,5 +34,6 @@ export let lista = [
     new Pessoa('Goes', 18, 66.3, 1.70),
     new Pessoa('Vitor', 18, 66.7, 1.70), 
     new Pessoa('Matheos', 18, 62.2, 1.85),
+    
    
     ]
