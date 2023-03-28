@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos em JS: onChange</title>
+</head>
+<body>
+    <h2 class="title">Evento JS: onChange</h2>
+    <button onclick="window.location.href='index.html'">HOME</button>
+    <br>
+    <br>
+
+    <p>O evento onChange em JavaScript é acionado quando o valor de um elemento HTML, como um campo de formulário, é alterado pelo usuário.</p>
+
+    <img src="img/foto_ex_onChance.jpeg" alt="exemplo_OnChange">
+
+    <p>Nesse exemplo, o código JavaScript console.log(this.value) será executado toda vez que o valor do campo de texto for alterado, exibindo o valor atual do campo no console.</p>
+    <p>PS: lembre-se de clicar no botão ENTER para que o valor do input ir ao console.</p>
+
+
+    <input type="text" id="meuInput" onChange="console.log(this.value)"onkeyup="resetarTempo()">
+
+    <script>
+        var tempo;
+        function resetarTempo() {
+          clearTimeout(tempo);
+          tempo = setTimeout(function() {
+            document.getElementById('meuInput').value = '';
+          }, 1000);
+        }
+      </script>
+
+    <br>
+    <p>Agora se você clicar o botão direito do mouse e clicar em (Inpencionar Elementos) e depois ir em Console, você vera que o resultado do input esta ai. </p>
+
+
+    <button onclick="window.location.href='input.html'">PROXIMO</button>
+    <button onclick="window.location.href='dblClink.html'">RETORNAR PARA ANTERIOR</button>
+</body>
+</html>

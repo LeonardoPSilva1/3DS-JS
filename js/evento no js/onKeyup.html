@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos em JS: OnKeyUP</title>
+</head>
+<body>
+    <h2 class="title">Evento JS: OnKeyUP</h2>
+
+    <button onclick="window.location.href='index.html'">HOME</button>
+    <br>
+    <br>
+
+    <p>O evento onkeyup é uma função do JavaScript que é acionada quando o usuário solta uma tecla após pressioná-la no teclado. Esse evento é muito útil para executar uma ação quando uma tecla específica ou combinação de teclas é pressionada.</p>
+
+    <p>Foto exemplo:</p>
+
+    <img src="img/keyDown.jpeg" alt="EX_KEYDOWN">
+    <br>
+    <br>
+
+    <p>Precione alguma tecla e Depois solte-a: </p>
+
+    <input type="text" id="search">
+
+    <div id="result">Nenhum Resultado</div>
+
+    <script>
+
+        var text = document.getElementById("search");
+        var result = document.getElementById("result");
+        var resultDefaultTex = "Nenhum Resultado";
+
+        text.addEventListener("keyup", function(){
+            var value = this.value;
+            if(value !==""){
+               result.innerHTML = this.value;
+            }else{
+                result.innerText = resultDefaultTex;    
+            }
+        })
+
+    </script>
+
+    <br>
+    <br>
+    <button onclick="window.location.href='onFocus.html'">PROXIMO</button>
+    <button onclick="window.location.href='onKeyDown.html'">RETORNAR PARA ANTERIOR</button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos em JS: onLoad</title>
+</head>
+<body>
+    <h2 class="title">Evento JS: onLoad</h2>
+    <button onclick="window.location.href='index.html'">HOME</button>
+    <br>
+    <br>
+    <p>Percebe-se o alerta que deu na pagina? então, esse é o evento Onload, o evento Onload é um evento em JavaScript que é acionado quando um recurso, como uma imagem, um script ou uma página web completa, terminou de carregar no navegador.
+    </p>
+    
+    <p>O evento "onload" é frequentemente usado para executar ações após o carregamento completo de uma página ou recurso. Por exemplo, se você quiser executar um script JavaScript depois que a página tiver sido carregada completamente, você pode usar o evento "onload" para garantir que o script seja executado somente após o carregamento completo da página.
+
+        Para adicionar um ouvinte de eventos "onload" em um elemento HTML, você pode usar a propriedade "onload" do elemento, por exemplo:</p>
+
+        <img src="img/foto_ex_onLoad.jpeg" alt="Exemplo_OnLoad">
+
+        <p>Esse é o codigo do Onload para dar o Alerta!</p>
+
+    
+    <script>
+    window.onload = function(){
+        alert("Pagina Carregou, clique em ok")
+    }
+
+    alert("Pagina carregando");
+    </script>
+
+    <br>
+    <br>
+    <button onclick="window.location.href='onMouseOver.html'">PROXIMO</button>
+    <button onclick="window.location.href='input.html'">RETORNAR PARA ANTERIOR</button>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos em JS: Input</title>
+   
+</head>
+<body>
+    <h2 class="title">Evento JS: Input</h2>
+    <button onclick="window.location.href='index.html'">HOME</button>
+    <br>
+    <br>
+
+    <p>O evento "input" em JavaScript é acionado quando um elemento HTML, como uma caixa de texto, recebe entrada do usuário. Isso inclui a digitação de caracteres, colagem de texto, uso de comandos de voz e outros métodos de entrada de texto.</p>
+
+    <img src="img/foto_ex_Input.jpeg" alt="Exemplo_Iput">
+
+    <p>Aqui no codigo estou mostrando como funciona a caixa do input e como eu coloco o valor nela.</p>
+
+ 
+    
+    <form action="">
+        <input type="text" name="name" id="name" placeholder="Digite seu nome">
+        <input type="submit" id="send" value="Enviar">
+    </form>
+
+    <p>Olhe no console mais uma vez para que possa ver o resultado do input!</p>
+
+    <script>
+        const btn = document.querySelector("#send");
+
+        btn.addEventListener("click", function(e){
+
+            e.preventDefault(); 
+
+            const name = document.querySelector("#name");
+
+            const value = name.value;
+
+            console.log(value); 
+        })
+    </script>
+
+    <br>
+    <br>
+    <button onclick="window.location.href='onload.html'">PROXIMO</button>
+    <button onclick="window.location.href='onchange.html'">RETORNAR PARA ANTERIOR</button>
+</body>
+</html>

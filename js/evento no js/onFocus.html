@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos em JS: onFocus</title>
+</head>
+<body>
+    <h2 class="title">Evento JS: onFocus</h2>
+    <button onclick="window.location.href='index.html'">HOME</button>
+    <br>
+    <br>
+
+    <p>O evento onfocus é uma função do JavaScript que é acionada quando um elemento HTML recebe o foco, ou seja, quando o usuário clica nele ou navega para ele usando a tecla Tab.
+
+        Você pode usar o evento onfocus para executar uma ação quando o usuário entra em um determinado elemento HTML, como um campo de entrada de texto. Por exemplo, você pode exibir uma mensagem de ajuda ou selecionar automaticamente todo o texto no campo de entrada quando ele receber o foco.</p>
+
+        <img src="img/OnFocus.jpeg" alt="EX_ONFOCUS">
+        <br>
+        <br>
+        <p>Se voce não preencher nada o codigo vai fazer o reconhecimento com o evento onblur</p>
+
+    <input type="text" placeholder="Informe o Texto" id="valor" onblur="minhafuncao()">    
+    <div id="resultado"></div>
+
+    <script>
+
+        document.getElementById('valor').focus();
+
+        function minhafuncao(){
+            var valor = document.getElementById('valor').value;
+
+            document.getElementById('resultado').innerHTML = valor;
+
+            if(valor){
+                document.getElementById('resultado').innerHTML = valor;
+
+            }else{
+                document.getElementById('resultado').innerHTML = "Campo Vazio!";
+            }
+
+        }
+
+    </script>
+
+    <br>    
+    <br>
+    <button onclick="window.location.href='onKeyup.html'">RETORNAR PARA ANTERIOR</button>
+
+</body>
+</html>

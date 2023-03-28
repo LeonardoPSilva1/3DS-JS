@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos em JS: onMouseOver e OnMouse Out</title>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <h2 class="title">Evento JS: OnMouseOver e OnMouseOut</h2>
+    <button onclick="window.location.href='index.html'">HOME</button>
+    <br>
+    <br>
+
+    <p>OnMouseOver é um evento em JavaScript que é acionado quando o ponteiro do mouse é movido para cima de um elemento específico em uma página da web. O evento pode ser usado para executar uma função JavaScript ou alterar o comportamento de um elemento quando o mouse está sobre ele.</p>
+    
+    <img src="img/OnMouseOver.jpeg" alt="EX_mouseOver">
+
+    <p>Aqui voce vera o codigo do OnMouseOver para melhor Compreendimento</p>
+    <br>
+    <br>
+    <div id="meuElemento">Passe o mouse sobre mim!</div>
+    <br>
+    <br>
+    <p>Percebe-se que quando tiremos o mouse do elemento ele volta a sua cor original e o seu texto original, esse é o evento OnMouseOut que basicamente é a mesma coisa do OnMouseOver</p>
+
+    <img src="img/OnMouseOUT.jpeg" alt="Ex_MouseOUT">
+
+    <p>Aqui voce vera o codigo do OnMouseOut para melhor Compreendimento</p>
+
+    <script>
+    let meuElemento = document.getElementById("meuElemento");
+
+    meuElemento.onmouseover = function() {
+  // alterar a cor de fundo 
+        meuElemento.style.backgroundColor = "red";
+  
+  // alterar o conteúdo 
+        meuElemento.innerHTML = "Mouse está sobre mim!";
+    }
+
+    meuElemento.onmouseout = function() {
+  // retornar a cor de fundo ao estado original
+        meuElemento.style.backgroundColor = "";
+  
+  // retornar o conteúdo ao estado original
+    meuElemento.innerHTML = "Passe o mouse sobre mim!";
+    }
+
+    </script>   
+
+
+    <br>
+    <br>
+    <button onclick="window.location.href='onKeyDown.html'">PROXIMO</button>
+    <button onclick="window.location.href='onload.html'">RETORNAR PARA ANTERIOR</button>
+</body>
+</html>

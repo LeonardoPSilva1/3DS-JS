@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
+    <title>Eventos em JS: OnKeyDown</title>
+</head>
+<body>
+    <h2 class="title">Evento JS: OnKeyDown</h2>
+    <button onclick="window.location.href='index.html'">HOME</button>
+    <br>
+    <br>
+
+    <p>O evento keydown é uma função do JavaScript que é acionada quando o usuário pressiona uma tecla no teclado. É semelhante ao evento onkeyup, mas é acionado quando a tecla é pressionada, e não quando ela é solta.
+
+        Você pode usar o evento keydown com um elemento HTML de entrada, como um campo de texto, para executar uma ação enquanto o usuário está digitando. Por exemplo, você pode limitar o número de caracteres que um usuário pode digitar em um campo de entrada, ou verificar se a tecla pressionada é uma tecla específica.</p>
+
+        <p>Por exemplo, Se voce clicar as setas do seu teclado, avera um alerta mostrando qual seta voce clicou</p>
+
+        <img src="img/KEYDOWN (2).jpeg" alt="EX_KEYDOWN">
+
+        <P>Aqui esta o codigo para melhor Compreendimento</P>
+
+    <script>
+        document.addEventListener("keydown", function(event) {
+  if (event.keyCode === 40) {
+    alert("Você pressionou a tecla de seta para baixo!");
+  }else if(event.keyCode ===37){
+    alert("Voce pressionou a tecla de seta para esquerda!")
+  }else if(event.keyCode === 38){
+    alert("Voce pressionou a tecla de seta para cima!")
+  }else if(event.keyCode === 39){
+    alert("Voce pressionou a tecla de seta para direita!")
+  }
+});
+  
+    </script>
+
+    <br>
+    <br>
+    <button onclick="window.location.href='onKeyup.html'">PROXIMO</button>
+    <button onclick="window.location.href='onMouseOver.html'">RETORNAR PARA ANTERIOR</button>
+</body>
+</html>
